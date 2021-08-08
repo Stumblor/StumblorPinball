@@ -61,7 +61,7 @@ function wait_for_jquery(method) {
     if (window.jQuery) {
         method();
     } else {
-        setTimeout(function() { defer(method) }, 50);
+        setTimeout(function() { defer(wait_for_jquery) }, 50);
     }
 }
 
