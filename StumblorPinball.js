@@ -60,7 +60,7 @@ setInterval(function() {
 }, 1000);
 
 
-function wait_for_item(item. method) {
+function wait_for_item(item, method) {
     if (item) {
         method();
     } else {
