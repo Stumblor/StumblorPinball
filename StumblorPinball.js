@@ -1,5 +1,3 @@
-JSResult Skip Results Iframe
-EDIT ON
 // Global site tag (gtag.js) - Google Analytics
 
 window.dataLayer = window.dataLayer || [];
