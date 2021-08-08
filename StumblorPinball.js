@@ -75,3 +75,4 @@ wait_for_jquery(() => {
   // TWIPYS
   addClass($("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']").parentElement, "twipys"); // MYS
 });
+
