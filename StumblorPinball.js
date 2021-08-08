@@ -57,5 +57,5 @@ setInterval(function() {
 }, 1000);
 
 // TWIPYS
-document.querySelector("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']")
+$("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']")
   .append("<img class='twipy' src='/uploads/1/3/2/3/132317513/s147425658952962846_p7_i2_w100.png'/>") // MYS
