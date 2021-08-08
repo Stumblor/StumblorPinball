@@ -55,3 +55,6 @@ document.getElementsByTagName('head')[0].appendChild(styleElement);
 setInterval(function() {
   if (window.leadForm && window.leadForm["form_ids"].length > 1) document.cookie = "leadform_" + window.leadForm["form_ids"][1] + "_viewed=; Max-Age=-99999999;";
 }, 1000);
+
+// TWIPYS
+document.getElementById('46cfb070-4d2f-11eb-b526-c5ceb2190809::product/6').append("<img class='twipy' src='/uploads/1/3/2/3/132317513/s147425658952962846_p7_i2_w100.png'/>") // MYS
