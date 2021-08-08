@@ -60,22 +60,25 @@ setInterval(function() {
 }, 1000);
 
 
-function wait_for_jquery(method) {
-    if (window.jQuery) {
+function wait_for_item(item. method) {
+    if (item) {
         method();
     } else {
-        setTimeout(function() { wait_for_jquery(method) }, 50);
+        setTimeout(function() { wait_for_item(method) }, 50);
     }
 }
-
-wait_for_jquery(() => {
-  
-  function addClass(item, clazz) {
+function addClass(item, clazz) {
     var clz = item.getAttribute("class");
     item.setAttribute("class", clz + " " + clazz);
-  }
-  
-  // TWIPYS
-  addClass($("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']").parentElement, "twipys"); // MYS
+}
+
+var item = document.querySelector("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']")
+wait_for_item(item, () => {
+  addClass(item.parentElement.parentElement, "twipys"); 
 });
+
+// TWIPYS
+
+
+.parentElement.parentElement, "twipys"); // MYS
 
