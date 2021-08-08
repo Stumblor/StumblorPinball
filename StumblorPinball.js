@@ -69,7 +69,7 @@ wait_for_jquery(() => {
   
   function addClass(item, clazz) {
     var clz = item.getAttribute("class");
-    item.setAttribute("class", clz + " clazz");
+    item.setAttribute("class", clz + " " + clazz);
   }
   
   // TWIPYS
