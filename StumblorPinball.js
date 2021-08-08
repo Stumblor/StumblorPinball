@@ -36,8 +36,15 @@ drift.load('4333vua8587v');
 var styleElement = document.createElement('style');
 
 var css = [
-  ".zoomable__image[format=gif] { object-fit: contain!important; }", // Animated GIFs on Product Page
-  "#banner-text { font-size: 24px!important; }" // homepage banner fixes
+  `
+  // Animated GIFs on Product Page
+  .zoomable__image[format=gif] { 
+   object-fit: contain!important; 
+  }
+  #banner-text { 
+    font-size: 24px!important;
+  }
+  `
 ];
 for(var i = 0; i < css.length; i++)
   styleElement.appendChild(document.createTextNode(css[i]));
