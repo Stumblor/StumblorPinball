@@ -44,6 +44,9 @@ var css = [
   #banner-text { 
     font-size: 24px!important;
   }
+  .twipys::after {
+    content: url('/uploads/1/3/2/3/132317513/s147425658952962846_p7_i2_w100.png');
+  }
   `
 ];
 for(var i = 0; i < css.length; i++)
