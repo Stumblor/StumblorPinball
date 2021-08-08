@@ -56,6 +56,17 @@ setInterval(function() {
   if (window.leadForm && window.leadForm["form_ids"].length > 1) document.cookie = "leadform_" + window.leadForm["form_ids"][1] + "_viewed=; Max-Age=-99999999;";
 }, 1000);
 
-// TWIPYS
-$("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']")
-  .append("<img class='twipy' src='/uploads/1/3/2/3/132317513/s147425658952962846_p7_i2_w100.png'/>") // MYS
+
+function wait_for_jquery(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+
+wait_for_jquery(() => {
+   // TWIPYS
+  $("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']")
+    .append("<img class='twipy' src='/uploads/1/3/2/3/132317513/s147425658952962846_p7_i2_w100.png'/>") // MYS
+});
