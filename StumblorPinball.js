@@ -59,23 +59,3 @@ setInterval(function() {
   if (window.leadForm && window.leadForm["form_ids"].length > 1) document.cookie = "leadform_" + window.leadForm["form_ids"][1] + "_viewed=; Max-Age=-99999999;";
 }, 1000);
 
-
-// TWIPYS
-function wait_for_item(item, method) {
-    if (item) {
-        method();
-    } else {
-        setTimeout(function() { wait_for_item(item, method) }, 50);
-    }
-}
-function addClass(item, clazz) {
-    var clz = item.getAttribute("class");
-    item.setAttribute("class", clz + " " + clazz);
-}
-
-// MYS
-var item = document.querySelector("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']")
-wait_for_item(item, () => {
-  addClass(item.parentElement.parentElement, "twipys"); 
-});
-
