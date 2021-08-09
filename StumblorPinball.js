@@ -78,3 +78,4 @@ var item = document.querySelector("div[alt='Move Your Snackbar | a lighting mod 
 wait_for_item(item, () => {
   addClass(item.parentElement.parentElement, "twipys"); 
 });
+
