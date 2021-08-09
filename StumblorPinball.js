@@ -65,7 +65,7 @@ function wait_for_item(item, method) {
     if (item) {
         method();
     } else {
-        setTimeout(function() { wait_for_item(method) }, 50);
+        setTimeout(function() { wait_for_item(item, method) }, 50);
     }
 }
 function addClass(item, clazz) {
