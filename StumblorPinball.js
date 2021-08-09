@@ -60,6 +60,7 @@ setInterval(function() {
 }, 1000);
 
 
+// TWIPYS
 function wait_for_item(item, method) {
     if (item) {
         method();
@@ -72,13 +73,8 @@ function addClass(item, clazz) {
     item.setAttribute("class", clz + " " + clazz);
 }
 
+// MYS
 var item = document.querySelector("div[alt='Move Your Snackbar | a lighting mod for Swinks CFTBL snackbar mod']")
 wait_for_item(item, () => {
   addClass(item.parentElement.parentElement, "twipys"); 
 });
-
-// TWIPYS
-
-
-.parentElement.parentElement, "twipys"); // MYS
-
