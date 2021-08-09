@@ -37,7 +37,6 @@ var styleElement = document.createElement('style');
 
 var css = [
   `
-  // Animated GIFs on Product Page
   .zoomable__image[format=gif] { 
    object-fit: contain!important; 
   }
