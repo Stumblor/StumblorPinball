@@ -66,7 +66,11 @@ if ($.ajax) {
     success: (html) => {
       var stories = () => {
         if ($('#dniXkG').length == 0) setTimeout(stories, 500);
-        //$('#dniXkG').after(html);
+        $('#dniXkG').after("<iframe id='iframe_stories'></iframe>");
+        var doc = document.getElementById('iframe_stories').contentWindow.document;
+        doc.open();
+        doc.write(html);
+        doc.close();
       }
       stories();
     }
