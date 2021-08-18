@@ -58,3 +58,5 @@ setInterval(function() {
   if (window.leadForm && window.leadForm["form_ids"].length > 1) document.cookie = "leadform_" + window.leadForm["form_ids"][1] + "_viewed=; Max-Age=-99999999;";
 }, 1000);
 
+// Stories
+$.ajax({ url: "https://www.stumblorpinball.com/s/stories" });
