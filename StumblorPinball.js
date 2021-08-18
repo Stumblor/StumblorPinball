@@ -67,7 +67,7 @@ if ($.ajax) {
       var stories = () => {
         if ($('#dniXkG').length == 0) setTimeout(stories, 500);
         $('#dniXkG').after("<iframe id='iframe_stories'></iframe>");
-        var doc = document.getElementById('iframe_stories').contentWindow.document;
+        var doc = $('#iframe_stories')[0].contentWindow.document;
         doc.open();
         doc.write(html);
         doc.close();
