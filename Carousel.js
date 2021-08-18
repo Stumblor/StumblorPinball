@@ -118,5 +118,5 @@ var html = `
 `
 
 // insert
-$('body').append(html);
+document.body.innerHTML = html;
 
