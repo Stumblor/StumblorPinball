@@ -75,6 +75,7 @@ $( document ).ready(function() {
       if (!html) return setTimeout(wait, 500);
       var $html = $(html);
       var $stories = $('#4078cd53-5d8e-11eb-ac18-c3411b499b43', $html);
+      debugger;
       if ($stories.length == 0 || $stories.html() == "") return setTimeout(wait, 500);
       $('#dniXkG').after($stories);
       $('#iframe_stories').remove();
