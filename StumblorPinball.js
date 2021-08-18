@@ -61,10 +61,13 @@ setInterval(function() {
 // Stories
 var stories = () => {
   if ($('#dniXkG').length == 0) setTimeout(stories, 500);
-  $('#dniXkG').after("<iframe id='iframe_stories' src='https://www.stumblorpinball.com/s/stories'></iframe>");
-  var doc = $('#iframe_stories')[0].contentWindow.document;
-  doc.open();
-  doc.write(html);
-  doc.close();
+  $('#dniXkG').after("<iframe id='iframe_stories'></iframe>");
+  //$('#iframe_stories').hide().attr("src", "https://www.stumblorpinball.com/s/stories");
+  $('#iframe_stories').attr("src", "https://www.stumblorpinball.com/s/stories");
+  var $html = $($('#iframe_stories')[0].contentWindow.document.documentElement);
+  debugger;
+  //doc.open();
+  //doc.write(html);
+  //doc.close();
 }
 stories();
