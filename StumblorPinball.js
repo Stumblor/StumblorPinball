@@ -60,6 +60,13 @@ setInterval(function() {
 
 // Stories
 var stories = () => {
+  // add css
+  var link = document.createElement('link');
+  link.setAttribute('rel', 'stylesheet');
+  link.setAttribute('href', 'https://cdn3.editmysite.com/app/website/css/blog-feed-layout-column.90e1311e2a504723de8a.css');
+  document.head.appendChild(link);
+  
+  // iframe 
   if ($('#dniXkG').length == 0) setTimeout(stories, 500);
   $('#dniXkG').after("<iframe id='iframe_stories' style='display: none'></iframe>");
   $('#iframe_stories').attr("src", "https://www.stumblorpinball.com/s/stories");
