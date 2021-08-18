@@ -64,10 +64,12 @@ var stories = () => {
   $('#dniXkG').after("<iframe id='iframe_stories'></iframe>");
   //$('#iframe_stories').hide().attr("src", "https://www.stumblorpinball.com/s/stories");
   $('#iframe_stories').attr("src", "https://www.stumblorpinball.com/s/stories");
-  var $html = $($('#iframe_stories')[0].contentWindow.document.documentElement);
-  debugger;
-  //doc.open();
-  //doc.write(html);
-  //doc.close();
+  var wait = () => {
+    var html = $('#iframe_stories')[0].contentWindow.document.documentElement;
+    if (!html) setTimeout(wait, 500);
+    var $html = $(html);
+    debugger;
+  }
+  wait();
 }
 stories();
