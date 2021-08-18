@@ -80,4 +80,6 @@ $( document ).ready(function() {
     wait();
   }
   stories();
+  
+  window.addEventListener('popstate', stories); // when URL changes
 });
