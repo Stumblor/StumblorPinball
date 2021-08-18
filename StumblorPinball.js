@@ -81,5 +81,8 @@ $( document ).ready(function() {
   }
   stories();
   
-  window.addEventListener('popstate', stories); // when URL changes
+  window.addEventListener('popstate', () => {
+    debugger;
+    stories();
+  }); // when URL changes
 });
