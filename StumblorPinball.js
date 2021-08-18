@@ -79,10 +79,11 @@ $( document ).ready(function() {
     }
     wait();
   }
-  stories();
   
-  window.addEventListener('popstate', () => {
-    debugger;
-    stories();
-  }); // when URL changes
+  // URL CHECKER
+  var urlwas = "";
+  setInterval(() => {
+    var url = window.location.href;
+    if (url == "https://www.stumblorpinball.com/" && url != urlwas) stories();
+  }, 500)
 });
