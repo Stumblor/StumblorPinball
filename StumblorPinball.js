@@ -60,11 +60,16 @@ setInterval(function() {
 
 // Stories
 if ($.ajax) {
-  $.ajax({ url: "https://www.stumblorpinball.com/s/stories", dataType: "html" });
-  var stories = () => {
-    if ($('#dniXkG').length == 0) setTimeout(stories, 500);
-    debugger;
-    $('#dniXkG').after("<div>Testing</div>");
-  }
-  stories();
+  $.ajax({ 
+    url: "https://www.stumblorpinball.com/s/stories", 
+    dataType: "html",
+    success: (html) => {
+      var stories = () => {
+        if ($('#dniXkG').length == 0) setTimeout(stories, 500);
+        debugger;
+        $('#dniXkG').after("<div>Testing</div>");
+      }
+      stories();
+    }
+  });
 }
