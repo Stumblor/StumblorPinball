@@ -1,7 +1,4 @@
 var html = `
-<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.4.1/dist/jquery.min.js" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -120,23 +117,19 @@ var html = `
 // insert
 document.body.innerHTML = html;
 
-var carousel = () => {
-  if (!$) setTimeout(carousel, 500);
-  $('.logo-carousel').slick({
-    autoplay: false,
-    cssEase: 'linear',
-    speed: 3990,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
-  });
+$('.logo-carousel').slick({
+  autoplay: false,
+  cssEase: 'linear',
+  speed: 3990,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  pauseOnHover: false,
+  responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
+});
 
-  // use this to go to the next slide whenever you want
-  setInterval(function() {
-    $('.logo-carousel').slick('slickNext');
-  }, 1000);
-}
-carousel();
+// use this to go to the next slide whenever you want
+setInterval(function() {
+  $('.logo-carousel').slick('slickNext');
+}, 1000);
