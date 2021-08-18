@@ -63,6 +63,7 @@ $( document ).ready(function() {
 
   // Stories
   var stories = () => {
+    debugger;
     // iframe 
     if ($('#dniXkG').length == 0) setTimeout(stories, 500);
     $('#dniXkG').after("<iframe id='iframe_stories' style='display: none'></iframe>");
