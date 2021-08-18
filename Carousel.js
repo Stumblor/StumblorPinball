@@ -120,3 +120,19 @@ var html = `
 // insert
 document.body.innerHTML = html;
 
+$('.logo-carousel').slick({
+    autoplay: false,
+    cssEase: 'linear',
+    speed: 3990,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
+  });
+  
+  // use this to go to the next slide whenever you want
+  setInterval(function() {
+    $('.logo-carousel').slick('slickNext');
+  }, 1000);
