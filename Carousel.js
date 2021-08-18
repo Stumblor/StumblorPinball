@@ -43,7 +43,6 @@ var html = `
 }
 .slick-slide:hover {
   filter: grayscale(0%);
-  zoom: 1.1;
 }
 .slick-list {
   overflow: visible;
