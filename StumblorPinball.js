@@ -61,6 +61,7 @@ setInterval(function() {
 // Slider Carousel
 var carousel = () => {
   if ($('.logo-carousel').length == 0) return setTimeout(carousel, 1000); // wait until ready
+  debugger;
   $('.logo-carousel').slick({
     autoplay: false,
     cssEase: 'linear',
