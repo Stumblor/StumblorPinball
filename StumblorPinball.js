@@ -61,5 +61,9 @@ setInterval(function() {
 // Stories
 if ($.ajax) {
   $.ajax({ url: "https://www.stumblorpinball.com/s/stories" });
-  $('#dniXkG').after("<div>Testing</div>");
+  var stories() => {
+    if ($('#dniXkG').length == 0) setTimeout(stories, 500);
+    $('#dniXkG').after("<div>Testing</div>");
+  }
+  stories();
 }
