@@ -85,5 +85,6 @@ $( document ).ready(function() {
   setInterval(() => {
     var url = window.location.href;
     if (url == "https://www.stumblorpinball.com/" && url != urlwas) stories();
+    urlwas = url;
   }, 500)
 });
