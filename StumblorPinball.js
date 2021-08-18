@@ -61,8 +61,7 @@ setInterval(function() {
 // Stories
 var stories = () => {
   if ($('#dniXkG').length == 0) setTimeout(stories, 500);
-  $('#dniXkG').after("<iframe id='iframe_stories'></iframe>");
-  //$('#iframe_stories').hide().attr("src", "https://www.stumblorpinball.com/s/stories");
+  $('#dniXkG').after("<iframe id='iframe_stories' style='display: none'></iframe>");
   $('#iframe_stories').attr("src", "https://www.stumblorpinball.com/s/stories");
   var wait = () => {
     if (!$('#iframe_stories')[0]) return setTimeout(wait, 500);
