@@ -66,7 +66,7 @@ if ($.ajax) {
     success: (html) => {
       var stories = () => {
         if ($('#dniXkG').length == 0) setTimeout(stories, 500);
-        $('#dniXkG').after(html);
+        //$('#dniXkG').after(html);
       }
       stories();
     }
