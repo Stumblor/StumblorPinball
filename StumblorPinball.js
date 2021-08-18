@@ -65,6 +65,7 @@ var stories = () => {
   //$('#iframe_stories').hide().attr("src", "https://www.stumblorpinball.com/s/stories");
   $('#iframe_stories').attr("src", "https://www.stumblorpinball.com/s/stories");
   var wait = () => {
+    if (!$('#iframe_stories')[0]) setTimeout(wait, 500);
     var html = $('#iframe_stories')[0].contentWindow.document.documentElement;
     if (!html) setTimeout(wait, 500);
     var $html = $(html);
