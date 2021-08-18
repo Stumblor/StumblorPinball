@@ -63,10 +63,8 @@ $( document ).ready(function() {
 
   // Stories
   var stories = () => {
-    if (window._stories) return;
-    window._stories = true;
     // iframe 
-    if ($('#dniXkG').length == 0) setTimeout(stories, 500);
+    if ($('#dniXkG').length == 0) return setTimeout(stories, 500);
     $('#dniXkG').after("<iframe id='iframe_stories' style='display: none'></iframe>");
     $('#iframe_stories').attr("src", "https://www.stumblorpinball.com/s/stories");
     var wait = () => {
