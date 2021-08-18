@@ -78,4 +78,4 @@ setInterval(function() {
 
 
 // Stories
-$.ajax({ url: "https://www.stumblorpinball.com/s/stories" });
+if ($.ajax) $.ajax({ url: "https://www.stumblorpinball.com/s/stories" });
