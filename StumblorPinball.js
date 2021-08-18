@@ -59,23 +59,27 @@ setInterval(function() {
 }, 1000);
 
 // Slider Carousel
-debugger;
-$('.logo-carousel').slick({
-  autoplay: false,
-  cssEase: 'linear',
-  speed: 3990,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: true,
-  dots: false,
-  pauseOnHover: false,
-  responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
-});
-
-// use this to go to the next slide whenever you want
-setInterval(function() {
+var carousel = () => {
+  if ($('.logo-carousel').length == 0) return setTimeout(carousel, 1000); // wait until ready
+  $('.logo-carousel').slick({
+    autoplay: false,
+    cssEase: 'linear',
+    speed: 3990,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
+  });
+  
+  // use this to go to the next slide whenever you want
+  setInterval(function() {
     $('.logo-carousel').slick('slickNext');
-}, 1000);
+  }, 1000);
+}
+carousel();
+
 
 
 // Stories
