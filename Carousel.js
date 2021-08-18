@@ -120,7 +120,9 @@ var html = `
 // insert
 document.body.innerHTML = html;
 
-$('.logo-carousel').slick({
+var carousel = () => {
+  if (!$) setTimeout(carousel, 500);
+  $('.logo-carousel').slick({
     autoplay: false,
     cssEase: 'linear',
     speed: 3990,
@@ -131,8 +133,10 @@ $('.logo-carousel').slick({
     pauseOnHover: false,
     responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
   });
-  
+
   // use this to go to the next slide whenever you want
   setInterval(function() {
     $('.logo-carousel').slick('slickNext');
   }, 1000);
+}
+carousel();
