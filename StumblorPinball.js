@@ -58,5 +58,24 @@ setInterval(function() {
   if (window.leadForm && window.leadForm["form_ids"].length > 1) document.cookie = "leadform_" + window.leadForm["form_ids"][1] + "_viewed=; Max-Age=-99999999;";
 }, 1000);
 
+// Slider Carousel
+$('.logo-carousel').slick({
+  autoplay: false,
+  cssEase: 'linear',
+  speed: 3990,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  pauseOnHover: false,
+  responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
+});
+  // use this to go to the next slide whenever you want
+  setInterval(function() {
+      $('.logo-carousel').slick('slickNext');
+  }, 1000);
+});
+
+
 // Stories
 $.ajax({ url: "https://www.stumblorpinball.com/s/stories" });
