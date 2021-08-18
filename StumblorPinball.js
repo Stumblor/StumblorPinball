@@ -59,6 +59,7 @@ setInterval(function() {
 }, 1000);
 
 // Slider Carousel
+debugger;
 $('.logo-carousel').slick({
   autoplay: false,
   cssEase: 'linear',
