@@ -59,20 +59,12 @@ setInterval(function() {
 }, 1000);
 
 // Stories
-if ($.ajax) {
-  $.ajax({ 
-    url: "https://www.stumblorpinball.com/s/stories", 
-    dataType: "html",
-    success: (html) => {
-      var stories = () => {
-        if ($('#dniXkG').length == 0) setTimeout(stories, 500);
-        $('#dniXkG').after("<iframe id='iframe_stories'></iframe>");
-        var doc = $('#iframe_stories')[0].contentWindow.document;
-        doc.open();
-        doc.write(html);
-        doc.close();
-      }
-      stories();
-    }
-  });
+var stories = () => {
+  if ($('#dniXkG').length == 0) setTimeout(stories, 500);
+  $('#dniXkG').after("<iframe id='iframe_stories' src='https://www.stumblorpinball.com/s/stories'></iframe>");
+  var doc = $('#iframe_stories')[0].contentWindow.document;
+  doc.open();
+  doc.write(html);
+  doc.close();
 }
+stories();
