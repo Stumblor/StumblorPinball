@@ -48,7 +48,7 @@ $( document ).ready(function() {
         position: relative;
         font-family: 'Barlow Condensed', sans-serif;
         max-width: 620px;
-        margin: 80px auto;
+        margin: 0px 0px 40px;
         align-self: center;
     }
 
