@@ -103,6 +103,7 @@ $( document ).ready(function() {
   setInterval(() => {
     var url = window.location.href;
     if (url != urlwas) {
+      debugger;
       if (url == "https://www.stumblorpinball.com/") stories();
       if (url.indexOf("https://www.stumblorpinball.com/product") >= 0) product();
     }
