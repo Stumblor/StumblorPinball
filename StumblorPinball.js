@@ -147,6 +147,7 @@ $( document ).ready(function() {
       var $html = $(html);
       var $stories = $('#4078cd53-5d8e-11eb-ac18-c3411b499b43', $html);
       if ($stories.length == 0 || $stories.html() == "") return setTimeout(wait, 500);
+      $('h3', $stories).css("text-align", "center");
       $('#dniXkG').before($stories);
       $('#iframe_stories').remove();
     }
