@@ -42,16 +42,9 @@ $( document ).ready(function() {
     .zoomable__image[format=gif] { 
       object-fit: contain!important; 
     }
-    
-    /* center the blockquote in the page */
-    .blockquote-wrapper {
-       display: flex;
-       height: 100vh;
-       padding: 0 20px;
-    }
 
     /* Blockquote main style */
-    .blockquote-wrapper blockquote {
+    blockquote {
         position: relative;
         font-family: 'Barlow Condensed', sans-serif;
         max-width: 620px;
@@ -60,25 +53,21 @@ $( document ).ready(function() {
     }
 
     /* Blockquote header */
-    .blockquote-wrapper blockquote h1 {
-        font-family: 'Abril Fatface', cursive;
+    blockquote h1 {
         position: relative; /* for pseudos */
-        color: #e74848;
-        font-size: 2.8rem;
-        font-weight: normal;
-        line-height: 1;
-        margin: 0;
-        border: 2px solid #fff;
+        color: #333;
+        font-size: 1.3em;
+        line-height: 1.3;
         border: solid 2px;
-        border-radius:20px;
+        border-radius: 20px;
         padding: 25px;
     }
 
     /* Blockquote right double quotes */
-    .blockquote-wrapper blockquote h1:after {
+    blockquote h1:after {
         content:"";
         position: absolute;
-        border: 2px solid #e74848;
+        border: 2px solid black;
         border-radius: 0 50px 0 0;
         width: 60px;
         height: 60px;
@@ -89,7 +78,7 @@ $( document ).ready(function() {
         z-index: 3; 
     }
 
-    .blockquote-wrapper blockquote h1:before {
+    blockquote h1:before {
         content:"";
         position: absolute;
         width: 80px;
@@ -100,10 +89,9 @@ $( document ).ready(function() {
     }
 
     /* Blockquote subheader */
-    .blockquote-wrapper blockquote h4 {
+    blockquote h4 {
         position: relative;
-        color: #ffffff;
-        font-size: 1.3rem;
+        font-size: 1em;
         font-weight: 400;
         line-height: 1.2;
         margin: 0;
@@ -113,7 +101,7 @@ $( document ).ready(function() {
         padding-left:12px;
     }
     
-    .blockquote-wrapper blockquote h4:first-letter {
+    blockquote h4:first-letter {
       margin-left:-12px;
     }
     
