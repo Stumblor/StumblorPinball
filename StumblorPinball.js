@@ -71,7 +71,7 @@ $( document ).ready(function() {
         border-radius: 0 50px 0 0;
         width: 60px;
         height: 60px;
-        bottom: -62px;
+        bottom: -60px;
         left: 50px;
         border-bottom: none;
         border-left: none;
