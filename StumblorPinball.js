@@ -170,7 +170,7 @@ $( document ).ready(function() {
   var product = () => {
     if ($('.w-product-description').length == 0) return setTimeout(product, 500);
     var html = $('.w-product-description > span').html();
-    html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\*\*\*\*/gi, "<div class=\"blockquote-wrapper\"><h1>$1</h1><h4>$2</h4></blockquote></div>");
+    html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\*\*\*\*/gi, "<div class=\"blockquote-wrapper\"><blockquote><h1>$1</h1><h4>$2</h4></blockquote></div>");
     $('.w-product-description > span').html(html);
   }
   
@@ -179,7 +179,6 @@ $( document ).ready(function() {
   setInterval(() => {
     var url = window.location.href;
     if (url != urlwas) {
-      debugger;
       if (url == "https://www.stumblorpinball.com/") stories();
       if (url.indexOf("https://www.stumblorpinball.com/product") >= 0) product();
     }
