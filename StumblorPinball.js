@@ -43,6 +43,25 @@ $( document ).ready(function() {
      object-fit: contain!important; 
     }
     
+    blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+    blockquote p {
+      display: inline;
+    }
+    
     .font--secondary p, .font--secondary span {
       font-size: 16px;
       line-height: 1.4em;
@@ -94,7 +113,7 @@ $( document ).ready(function() {
   var product = () => {
     if ($('.w-product-description').length == 0) return setTimeout(product, 500);
     var html = $('.w-product-description > span').html();
-    html = html.replace(/\*\*\*\*(.*)?(\(.*?\))\*\*\*\*/gi, "<div class='quote'>$1</div><div class='quote-person'>$2</div>");
+    html = html.replace(/\*\*\*\*(.*)?\*\*\*\*/gi, "<blockquote>$1</blockquote>");
     $('.w-product-description > span').html(html);
   }
   
