@@ -97,8 +97,7 @@ $( document ).ready(function() {
         margin: 0;
         padding-top: 15px;
         z-index: 1;
-        margin-left:150px;
-        padding-left:12px;
+        margin-left: 145px;
     }
     
     blockquote h4:first-letter {
