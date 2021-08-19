@@ -157,7 +157,7 @@ $( document ).ready(function() {
   var product = () => {
     if ($('.w-product-description').length == 0) return setTimeout(product, 500);
     var html = $('.w-product-description > span').html();
-    html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\*\*\*\*/gi, "<blockquote><h1>$1</h1><h4>$2</h4></blockquote>");
+    html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\((.*?)\)\*\*\*\*/gi, "<blockquote><h1>$1</h1><h4>$2<br/>$3</h4></blockquote>");
     $('.w-product-description > span').html(html);
   }
   
