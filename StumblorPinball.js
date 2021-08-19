@@ -138,7 +138,7 @@ $( document ).ready(function() {
   var stories = () => {
     // iframe 
     if ($('#dniXkG').length == 0) return setTimeout(stories, 500);
-    $('#dniXkG').after("<iframe id='iframe_stories' style='display: none'></iframe>");
+    $('#dniXkG').before("<iframe id='iframe_stories' style='display: none'></iframe>");
     $('#iframe_stories').attr("src", "https://www.stumblorpinball.com/s/stories");
     var wait = () => {
       if (!$('#iframe_stories')[0]) return setTimeout(wait, 500);
@@ -147,7 +147,7 @@ $( document ).ready(function() {
       var $html = $(html);
       var $stories = $('#4078cd53-5d8e-11eb-ac18-c3411b499b43', $html);
       if ($stories.length == 0 || $stories.html() == "") return setTimeout(wait, 500);
-      $('#dniXkG').after($stories);
+      $('#dniXkG').before($stories);
       $('#iframe_stories').remove();
     }
     wait();
