@@ -90,11 +90,22 @@ $( document ).ready(function() {
     wait();
   }
   
+  // Product Page - quotes
+  var product() => {
+    if ($('.w-product-description').length == 0) return setTimeout(product, 500);
+    var html = $('.w-product-description > span').html();
+    html.replace(/\*\*\*\*(.*)?(\(.*?\))\*\*\*\*/gi, "<div class='quote'>$1</div><div class='quote-person'>$2</div>");
+    $('.w-product-description > span').html(html);
+  }
+  
   // URL CHECKER
   var urlwas = "";
   setInterval(() => {
     var url = window.location.href;
-    if (url == "https://www.stumblorpinball.com/" && url != urlwas) stories();
+    if (url != urlwas) {
+      if (url == "https://www.stumblorpinball.com/") stories();
+      if (url.indexOf("https://www.stumblorpinball.com/product") >= 0) product();
+    }
     urlwas = url;
   }, 500)
 });
