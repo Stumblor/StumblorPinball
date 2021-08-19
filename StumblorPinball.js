@@ -155,7 +155,7 @@ $( document ).ready(function() {
   
   // Product Page - quotes
   var quotes = (target) => {
-    if ($(target).length == 0) return setTimeout(() => product(target), 500);
+    if ($(target).length == 0) return setTimeout(() => quotes(target), 500);
     var html = $(target).html();
     html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\((.*?)\)\*\*\*\*/gi, "<blockquote><h1>$1</h1><h4>$2<br/><i>$3</i></h4></blockquote>");
     $(target).html(html);
