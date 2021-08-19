@@ -40,33 +40,90 @@ $( document ).ready(function() {
     `
     /* Product Pages */    
     .zoomable__image[format=gif] { 
-     object-fit: contain!important; 
+      object-fit: contain!important; 
     }
     
-    blockquote {
-      background: #f9f9f9;
-      border-left: 10px solid #ccc;
-      margin: 1.5em 10px;
-      padding: 0.5em 10px;
-      quotes: ` + '"\201C""\201D""\2018""\2019"' + `;
+    /* center the blockquote in the page */
+    .blockquote-wrapper {
+       display: flex;
+       height: 100vh;
+       padding: 0 20px;
     }
-    blockquote:before {
-      color: #ccc;
-      content: open-quote;
-      font-size: 4em;
-      line-height: 0.1em;
-      margin-right: 0.25em;
-      vertical-align: -0.4em;
+
+    /* Blockquote main style */
+    .blockquote {
+        position: relative;
+        font-family: 'Barlow Condensed', sans-serif;
+        max-width: 620px;
+        margin: 80px auto;
+        align-self: center;
     }
-    blockquote p {
-      display: inline;
+
+    /* Blockquote header */
+    .blockquote h1 {
+        font-family: 'Abril Fatface', cursive;
+        position: relative; /* for pseudos */
+        color: #e74848;
+        font-size: 2.8rem;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0;
+        border: 2px solid #fff;
+        border: solid 2px;
+        border-radius:20px;
+        padding: 25px;
+    }
+
+    /* Blockquote right double quotes */
+    .blockquote h1:after {
+        content:"";
+        position: absolute;
+        border: 2px solid #e74848;
+        border-radius: 0 50px 0 0;
+        width: 60px;
+        height: 60px;
+        bottom: -62px;
+        left: 50px;
+        border-bottom: none;
+        border-left: none;
+        z-index: 3; 
+    }
+
+    .blockquote h1:before {
+        content:"";
+        position: absolute;
+        width: 80px;
+        border: 6px solid #292a2b;
+        bottom: -3px;
+        left: 50px;
+        z-index: 2;
+    }
+
+    /* Blockquote subheader */
+    .blockquote h4 {
+        position: relative;
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+        padding-top: 15px;
+        z-index: 1;
+        margin-left:150px;
+        padding-left:12px;
     }
     
+    .blockquote h4:first-letter {
+      margin-left:-12px;
+    }
+    
+    /* Product description */
     .font--secondary p, .font--secondary span {
       font-size: 16px;
       line-height: 1.4em;
     }
     
+    /* Landing Page */
     #banner-text { 
       font-size: 24px!important;
     }
@@ -113,7 +170,7 @@ $( document ).ready(function() {
   var product = () => {
     if ($('.w-product-description').length == 0) return setTimeout(product, 500);
     var html = $('.w-product-description > span').html();
-    html = html.replace(/\*\*\*\*(.*)?\*\*\*\*/gi, "<blockquote>$1</blockquote>");
+    html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\*\*\*\*/gi, "<div class="blockquote-wrapper"><h1>$1</h1><h4>$2</h4></blockquote></div>");
     $('.w-product-description > span').html(html);
   }
   
