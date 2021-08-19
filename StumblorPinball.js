@@ -51,7 +51,7 @@ $( document ).ready(function() {
     }
 
     /* Blockquote main style */
-    .blockquote {
+    .blockquote-wrapper blockquote {
         position: relative;
         font-family: 'Barlow Condensed', sans-serif;
         max-width: 620px;
@@ -60,7 +60,7 @@ $( document ).ready(function() {
     }
 
     /* Blockquote header */
-    .blockquote h1 {
+    .blockquote-wrapper blockquote h1 {
         font-family: 'Abril Fatface', cursive;
         position: relative; /* for pseudos */
         color: #e74848;
@@ -75,7 +75,7 @@ $( document ).ready(function() {
     }
 
     /* Blockquote right double quotes */
-    .blockquote h1:after {
+    .blockquote-wrapper blockquote h1:after {
         content:"";
         position: absolute;
         border: 2px solid #e74848;
@@ -89,7 +89,7 @@ $( document ).ready(function() {
         z-index: 3; 
     }
 
-    .blockquote h1:before {
+    .blockquote-wrapper blockquote h1:before {
         content:"";
         position: absolute;
         width: 80px;
@@ -100,7 +100,7 @@ $( document ).ready(function() {
     }
 
     /* Blockquote subheader */
-    .blockquote h4 {
+    .blockquote-wrapper blockquote h4 {
         position: relative;
         color: #ffffff;
         font-size: 1.3rem;
@@ -113,7 +113,7 @@ $( document ).ready(function() {
         padding-left:12px;
     }
     
-    .blockquote h4:first-letter {
+    .blockquote-wrapper blockquote h4:first-letter {
       margin-left:-12px;
     }
     
