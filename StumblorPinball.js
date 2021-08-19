@@ -91,7 +91,7 @@ $( document ).ready(function() {
   }
   
   // Product Page - quotes
-  var product() => {
+  var product = () => {
     if ($('.w-product-description').length == 0) return setTimeout(product, 500);
     var html = $('.w-product-description > span').html();
     html.replace(/\*\*\*\*(.*)?(\(.*?\))\*\*\*\*/gi, "<div class='quote'>$1</div><div class='quote-person'>$2</div>");
