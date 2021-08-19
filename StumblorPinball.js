@@ -175,5 +175,8 @@ $( document ).ready(function() {
       }
     }
     urlwas = url;
+    
+    // remove footer
+    $('#HZMYnr').remove();
   }, 500)
 });
