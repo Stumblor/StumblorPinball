@@ -77,6 +77,16 @@ $( document ).ready(function() {
         border-left: none;
         z-index: 3; 
     }
+    
+    blockquote h1:before {
+      content:"";
+      position: absolute;
+      width: 80px;
+      border: 6px solid white;
+      bottom: -3px;
+      left: 50px;
+      z-index: 2;
+    }
 
     /* Blockquote subheader */
     blockquote h4 {
