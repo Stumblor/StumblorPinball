@@ -120,6 +120,19 @@ $( document ).ready(function() {
       margin-left:-12px;
     }
     
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
     /* Product description */
     .font--secondary p, .font--secondary span {
       font-size: 16px;
@@ -183,7 +196,7 @@ $( document ).ready(function() {
   var youtube = (target, cb) => {
     if ($(target).length == 0) return setTimeout(() => youtube(target, cb), 500);
     var html = $(target).html();
-    var embed = '<iframe width="560" height="315" src="$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    var embed = '<div class="video-container"><iframe width="560" height="315" src="$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
     html = html.replace(/\$\$\$\$(.*)?\$\$\$\$/gi, embed);
     $(target).html(html);
     if (cb) cb();
