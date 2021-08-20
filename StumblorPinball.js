@@ -149,7 +149,7 @@ $( document ).ready(function() {
       text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
       line-height: 1.3em;
     }
-    #Lzfjeo .button-group {
+    #Lzfjeo .button-group p {
       text-shadow: none;
     }
     
