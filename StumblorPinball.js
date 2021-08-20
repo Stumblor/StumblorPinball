@@ -162,6 +162,15 @@ $( document ).ready(function() {
     $(target).html(html);
   }
   
+  // Youtube embeds
+  var youtube = (target) => {
+    if ($(target).length == 0) return setTimeout(() => quotes(target), 500);
+    var html = $(target).html();
+    var embed = '<iframe width="560" height="315" src="$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    html = html.replace(/\$\$\$\$(.*)?\$\$\$\$/gi, embed);
+    $(target).html(html);
+  }
+  
   // URL CHECKER
   var urlwas = "";
   setInterval(() => {
@@ -173,6 +182,7 @@ $( document ).ready(function() {
       }
       if (url.indexOf("https://www.stumblorpinball.com/product") >= 0) {
         quotes('.w-product-description > span');
+        youtube('.w-product-description > span');
       }
     }
     urlwas = url;
