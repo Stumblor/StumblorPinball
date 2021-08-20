@@ -65,7 +65,7 @@ $( document ).ready(function() {
         position: relative;
         font-family: 'Barlow Condensed', sans-serif;
         max-width: 620px;
-        margin: 0px;
+        margin: 0 auto;
         align-self: center;
     }
 
