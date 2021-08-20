@@ -42,14 +42,14 @@ $( document ).ready(function() {
     @media (min-width: 1200px) {
       :root {
           --content-padding: 0;
-          --max-container: 1000px;
+          --max-container: 1100px!important;
       }
     }
     
     .product-gallery__wrapper { max-width: 50%; }
     @media (min-width: 600px) {
       .product-detail-page .product-meta__wrapper {
-          width: auto;
+          width: auto!important;
           max-width: 50%;
       }
     }
