@@ -155,20 +155,22 @@ $( document ).ready(function() {
   }
   
   // Product Page - quotes
-  var quotes = (target) => {
+  var quotes = (target, cb) => {
     if ($(target).length == 0) return setTimeout(() => quotes(target), 500);
     var html = $(target).html();
     html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\((.*?)\)\*\*\*\*/gi, "<blockquote><h1>$1</h1><h4>$2<br/><i>$3</i></h4></blockquote>");
     $(target).html(html);
+    if (cb) cb();
   }
   
   // Youtube embeds
-  var youtube = (target) => {
+  var youtube = (target, cb) => {
     if ($(target).length == 0) return setTimeout(() => quotes(target), 500);
     var html = $(target).html();
     var embed = '<iframe width="560" height="315" src="$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     html = html.replace(/\$\$\$\$(.*)?\$\$\$\$/gi, embed);
     $(target).html(html);
+    if (cb) cb();
   }
   
   // URL CHECKER
@@ -181,8 +183,9 @@ $( document ).ready(function() {
         quotes("#uzNwiC p");
       }
       if (url.indexOf("https://www.stumblorpinball.com/product") >= 0) {
-        quotes('.w-product-description > span');
-        youtube('.w-product-description > span');
+        quotes('.w-product-description > span', () => {
+          youtube('.w-product-description > span');
+        });
       }
     }
     urlwas = url;
