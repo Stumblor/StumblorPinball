@@ -105,7 +105,6 @@ $( document ).ready(function() {
       z-index: 2;
     }
 
-    /* Blockquote subheader */
     blockquote h4 {
         position: relative;
         font-size: 1em;
@@ -141,7 +140,13 @@ $( document ).ready(function() {
     }
     
     /* Landing Page */
-    #banner-text { 
+    #Lzfjeo { 
+      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
+    }
+    #Lzfjeo h1 {
+      font-size: 35px!important;
+    }
+    #Lzfjeo p {
       font-size: 24px!important;
     }
     
