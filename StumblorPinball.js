@@ -140,18 +140,14 @@ $( document ).ready(function() {
     }
     
     /* Landing Page */
-    #Lzfjeo { 
-      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
-    }
     #Lzfjeo h1 {
       font-size: 35px!important;
+      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
     }
     #Lzfjeo p {
       font-size: 24px!important;
-    }
-    
-    .twipys::after {
-      content: url('/uploads/1/3/2/3/132317513/s147425658952962846_p7_i2_w100.png');
+      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
+      line-height: 1.3em;
     }
     
     /* Stories */
