@@ -188,7 +188,7 @@ $( document ).ready(function() {
   var quotes = (target, cb) => {
     if ($(target).length == 0) return setTimeout(() => quotes(target, cb), 500);
     var html = $(target).html();
-    html = html.replace(/\*\*\*\*(.*)?\((.*?)\)\((.*?)\)\*\*\*\*/gi, "<blockquote><h1>$1</h1><h4>$2<br/><i>$3</i></h4></blockquote>");
+    html = html.replace(/\*\*\*\*(.*?)\((.*?)\)\((.*?)\)\*\*\*\*/gi, "<blockquote><h1>$1</h1><h4>$2<br/><i>$3</i></h4></blockquote>");
     $(target).html(html);
     if (cb) cb();
   }
@@ -198,7 +198,7 @@ $( document ).ready(function() {
     if ($(target).length == 0) return setTimeout(() => youtube(target, cb), 500);
     var html = $(target).html();
     var embed = '<div class="video-container"><iframe width="560" height="315" src="$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
-    html = html.replace(/\$\$\$\$(.*)?\$\$\$\$/gi, embed);
+    html = html.replace(/\$\$\$\$(.*?)\$\$\$\$/gi, embed);
     $(target).html(html);
     if (cb) cb();
   }
