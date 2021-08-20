@@ -47,8 +47,8 @@ $( document ).ready(function() {
     }
     
     /* Product Page - 55/45 column split */
-    .product-gallery__wrapper { max-width: 55%; }
     @media (min-width: 600px) {
+      .product-gallery__wrapper { max-width: 55%; }
       .product-detail-page .product-meta__wrapper {
           width: auto!important;
           max-width: 45%;
