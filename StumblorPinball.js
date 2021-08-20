@@ -38,6 +38,19 @@ $( document ).ready(function() {
 
   var css = [
     `
+    /* General */
+    @media (min-width: 1200px)
+    :root {
+        --content-padding: 0;
+        --max-container: 1000px;
+    }
+    
+    .product-gallery__wrapper { max-width: 50%; }
+    @media (min-width: 600px)
+    .product-detail-page .product-meta__wrapper {
+        max-width: 50%;
+    }
+    
     /* Product Pages */    
     .zoomable__image[format=gif] { 
       object-fit: contain!important; 
