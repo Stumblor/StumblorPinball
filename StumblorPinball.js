@@ -46,11 +46,12 @@ $( document ).ready(function() {
       }
     }
     
-    .product-gallery__wrapper { max-width: 50%; }
+    /* Product Page - 60/40 column split */
+    .product-gallery__wrapper { max-width: 60%; }
     @media (min-width: 600px) {
       .product-detail-page .product-meta__wrapper {
           width: auto!important;
-          max-width: 50%;
+          max-width: 40%;
       }
     }
     
