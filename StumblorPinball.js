@@ -237,7 +237,7 @@ $( document ).ready(function() {
   // Variant Selection
   var urlwas = "";
   var var_interval = setInterval(() => {
-    if ($('select[name="dropdown-0"]).length == 0) return;
+    if ($('select[name="dropdown-0"]').length == 0) return;
     clearInterval(var_interval);
     const urlParams = new URLSearchParams(window.location.search);
     var qstring = String(urlParams.get('var')).toLowerCase();
