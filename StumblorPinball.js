@@ -235,12 +235,14 @@ $( document ).ready(function() {
   
   // Variant Selection
   const urlParams = new URLSearchParams(window.location.search);
-  var qstring = String(urlParams.get('variant')).toLowercase();
+  var qstring = String(urlParams.get('var')).toLowerCase();
   if (qstring) {
     var val = null;
-    $('select[name="dropdown-0"] option').each(function(i, item) {
-      if ($(item).html().toLowercase().indexOf(qstring) >= 0) val = $(item).prop("value");
-    });
-    if (val) $(item).val(val).change();
+    var options = $('select[name="dropdown-0"] option');
+    for(var i = 0; i < options.length; i++) {
+      var item = options[i];
+      if (String($(item).html()).toLowerCase().indexOf(qstring) >= 0) val = $(item).attr("value");
+    }
+    if (val) $('select[name="dropdown-0"]').val(val).change();
   }
 });
