@@ -232,4 +232,15 @@ $( document ).ready(function() {
     // remove footer
     $('#HZMYnr').remove();
   }, 500)
+  
+  // Variant Selection
+  const urlParams = new URLSearchParams(window.location.search);
+  var qstring = urlParams.get('variant');
+  if (qstring) {
+    var val = null;
+    $('select[name="dropdown-0"] option').each(fucntion(i, item) {
+      if ($(item).html().indexOf(qstring) >= 0) val = $(item).prop("value");
+    });
+    if (val) $(item).val(val).change();
+  }
 });
