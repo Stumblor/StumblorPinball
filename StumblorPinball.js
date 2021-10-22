@@ -231,18 +231,24 @@ $( document ).ready(function() {
     
     // remove footer
     $('#HZMYnr').remove();
+    
   }, 500)
   
   // Variant Selection
-  const urlParams = new URLSearchParams(window.location.search);
-  var qstring = String(urlParams.get('var')).toLowerCase();
-  if (qstring) {
-    var val = null;
-    var options = $('select[name="dropdown-0"] option');
-    for(var i = 0; i < options.length; i++) {
-      var item = options[i];
-      if (String($(item).html()).toLowerCase().indexOf(qstring) >= 0) val = $(item).attr("value");
+  var urlwas = "";
+  var var_interval = setInterval(() => {
+    if ($('select[name="dropdown-0"]).length == 0) return;
+    clearInterval(var_interval);
+    const urlParams = new URLSearchParams(window.location.search);
+    var qstring = String(urlParams.get('var')).toLowerCase();
+    if (qstring) {
+      var val = null;
+      var options = $('select[name="dropdown-0"] option');
+      for(var i = 0; i < options.length; i++) {
+        var item = options[i];
+        if (String($(item).html()).toLowerCase().indexOf(qstring) >= 0) val = $(item).attr("value");
+      }
+      if (val) $('select[name="dropdown-0"]').val(val).change();
     }
-    if (val) $('select[name="dropdown-0"]').val(val).change();
-  }
+  }, 500);
 });
