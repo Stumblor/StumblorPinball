@@ -235,11 +235,11 @@ $( document ).ready(function() {
   
   // Variant Selection
   const urlParams = new URLSearchParams(window.location.search);
-  var qstring = urlParams.get('variant');
+  var qstring = urlParams.get('variant').toLowercase();
   if (qstring) {
     var val = null;
     $('select[name="dropdown-0"] option').each(function(i, item) {
-      if ($(item).html().indexOf(qstring) >= 0) val = $(item).prop("value");
+      if ($(item).html().toLowercase().indexOf(qstring) >= 0) val = $(item).prop("value");
     });
     if (val) $(item).val(val).change();
   }
