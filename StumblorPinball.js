@@ -235,7 +235,7 @@ $( document ).ready(function() {
   
   // Variant Selection
   const urlParams = new URLSearchParams(window.location.search);
-  var qstring = urlParams.get('variant').toLowercase();
+  var qstring = String(urlParams.get('variant')).toLowercase();
   if (qstring) {
     var val = null;
     $('select[name="dropdown-0"] option').each(function(i, item) {
