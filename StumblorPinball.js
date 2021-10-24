@@ -160,7 +160,7 @@ $( document ).ready(function() {
     
     /* Stories */
     div[data-block-purpose="text-and-image@^1.0.0"] img {
-      max-width: 720px;
+      max-width: 400px;
       margin: 0 auto;
     }
     
