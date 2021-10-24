@@ -236,6 +236,9 @@ $( document ).ready(function() {
     // remove footer
     $('#HZMYnr').remove();
     
+    // fix story images
+    $("div[data-block-purpose='blog-content@^1.0.0'] img").css("max-width", "400px");
+    
   }, 500)
   
   // Variant Selection
