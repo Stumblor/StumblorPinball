@@ -159,7 +159,7 @@ $( document ).ready(function() {
     }
     
     /* Stories */
-    div[data-block-purpose='blog-content@^1.0.0'] img {
+    div[data-block-purpose="text-and-image@^1.0.0"] img {
       max-width: 400px;
     }
     
@@ -235,9 +235,6 @@ $( document ).ready(function() {
     
     // remove footer
     $('#HZMYnr').remove();
-    
-    // fix story images
-    $("div[data-block-purpose='blog-content@^1.0.0'] img").css("max-width", "400px");
     
   }, 500)
   
