@@ -179,7 +179,7 @@ $( document ).ready(function() {
     if (window.leadForm && window.leadForm["form_ids"].length > 1) document.cookie = "leadform_" + window.leadForm["form_ids"][1] + "_viewed=; Max-Age=-99999999;";
   }, 1000);
 
-  // Stories
+  // Stories on the homepage
   var stories = () => {
     // iframe 
     if ($('#dniXkG').length == 0) return setTimeout(stories, 500);
@@ -190,6 +190,16 @@ $( document ).ready(function() {
       var html = $('#iframe_stories')[0].contentWindow.document.documentElement;
       if (!html) return setTimeout(wait, 500);
       var $html = $(html);
+      
+      // lazyload images
+      debugger;
+      $("img", $html).each(function(i, img) {
+        img.addClass("lazyload");
+        var src = img.attr("src");
+        img.attr("data-src", src);
+        img.removeprop("src");
+      });
+      
       var $stories = $('#4078cd53-5d8e-11eb-ac18-c3411b499b43', $html);
       if ($stories.length == 0 || $stories.html() == "") return setTimeout(wait, 500);
       $('h3', $stories).css("text-align", "center");
