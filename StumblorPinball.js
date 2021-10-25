@@ -190,16 +190,6 @@ $( document ).ready(function() {
       var html = $('#iframe_stories')[0].contentWindow.document.documentElement;
       if (!html) return setTimeout(wait, 500);
       var $html = $(html);
-      
-      // lazyload images
-      debugger;
-      $("img", $html).each(function(i, img) {
-        $(img).addClass("lazyload");
-        var src = $(img).attr("src");
-        $(img).attr("data-src", src);
-        $(img).removeProp("src");
-      });
-      
       var $stories = $('#4078cd53-5d8e-11eb-ac18-c3411b499b43', $html);
       if ($stories.length == 0 || $stories.html() == "") return setTimeout(wait, 500);
       $('h3', $stories).css("text-align", "center");
