@@ -197,7 +197,7 @@ $( document ).ready(function() {
         img.addClass("lazyload");
         var src = img.attr("src");
         img.attr("data-src", src);
-        img.removeprop("src");
+        img.removeProp("src");
       });
       
       var $stories = $('#4078cd53-5d8e-11eb-ac18-c3411b499b43', $html);
