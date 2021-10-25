@@ -194,10 +194,10 @@ $( document ).ready(function() {
       // lazyload images
       debugger;
       $("img", $html).each(function(i, img) {
-        img.addClass("lazyload");
-        var src = img.attr("src");
-        img.attr("data-src", src);
-        img.removeProp("src");
+        $(img).addClass("lazyload");
+        var src = $(img).attr("src");
+        $(img).attr("data-src", src);
+        $(img).removeProp("src");
       });
       
       var $stories = $('#4078cd53-5d8e-11eb-ac18-c3411b499b43', $html);
