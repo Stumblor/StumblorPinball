@@ -232,7 +232,7 @@ $( document ).ready(function() {
         quotes("#uzNwiC p");
       } else {
         // non landing pages
-        drift();
+        //drift();
       }
       if (url.indexOf("https://www.stumblorpinball.com/product") >= 0) {
         quotes('.w-product-description > span', () => {
