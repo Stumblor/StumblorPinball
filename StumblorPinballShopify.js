@@ -39,7 +39,11 @@ $( document ).ready(function() {
   var css = [
     `
     /* General */
+
     /* Landing Page */
+    .banner__box {
+      background-color: transparent;
+    }
     .banner__box h2 {
       font-size: 35px!important;
       text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
