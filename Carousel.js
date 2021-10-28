@@ -122,9 +122,9 @@ divNode.innerHTML = style;
 document.body.appendChild(divNode);
 
 // insert carousel
-$('.logo-carousel')[0].innerHTML = html;
+$('#carousel')[0].innerHTML = html;
 
-$('.logo-carousel').slick({
+$('#carousel').slick({
   autoplay: false,
   cssEase: 'linear',
   speed: 3990,
@@ -138,5 +138,5 @@ $('.logo-carousel').slick({
 
 // use this to go to the next slide whenever you want
 setInterval(function() {
-  $('.logo-carousel').slick('slickNext');
+  $('#carousel').slick('slickNext');
 }, 1000);
