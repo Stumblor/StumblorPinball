@@ -65,8 +65,9 @@ $( document ).ready(function() {
         position: relative;
         font-family: 'Barlow Condensed', sans-serif;
         max-width: 620px;
-        margin: 0 auto;
+        margin: 0 auto!important;
         align-self: center;
+        border: 0!important;
     }
 
     /* Blockquote header */
