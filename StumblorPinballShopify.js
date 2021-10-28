@@ -39,25 +39,18 @@ $( document ).ready(function() {
   var css = [
     `
     /* General */
-    @media (min-width: 1200px) {
-      :root {
-          --content-padding: 0;
-          --max-container: 1100px!important;
-      }
+    /* Landing Page */
+    .banner__box h2 {
+      font-size: 35px!important;
+      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
     }
-    
-    /* Product Page - 55/45 column split */
-    @media (min-width: 600px) {
-      .product-gallery__wrapper { max-width: 55%; }
-      .product-detail-page .product-meta__wrapper {
-          width: auto!important;
-          max-width: 45%;
-      }
+    .banner__box .banner__text {
+      font-size: 24px!important;
+      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
+      line-height: 1.3em;
     }
-    
-    /* Product Pages */    
-    .zoomable__image[format=gif] { 
-      object-fit: contain!important; 
+    .banner__box .banner__buttons {
+      text-shadow: none;
     }
 
     /* Blockquote main style */
@@ -140,20 +133,7 @@ $( document ).ready(function() {
       line-height: 1.4em;
     }
     
-    /* Landing Page */
-    #Lzfjeo h1 {
-      font-size: 35px!important;
-      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
-    }
-    #Lzfjeo p {
-      font-size: 24px!important;
-      text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
-      line-height: 1.3em;
-    }
-    #Lzfjeo .button-group p {
-      text-shadow: none;
-    }
-    
+   
     /* footer */
     #sqCaNk a {
       zoom: 2;
