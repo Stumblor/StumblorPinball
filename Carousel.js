@@ -2,24 +2,20 @@ var html = `
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-<div class="row">
-  <div class="container">
-    <section class="logo-carousel slider" data-arrows="true">
+<section class="logo-carousel slider" data-arrows="true">
 
-      <div class="slide"><a href='http://www.pinballsupernova.com/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/pinball supernova sticker_1611598454.jpg"></a></div>
-      <div class="slide"><a href='https://pinballbazaar.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/the-pinball-bazaar-01-small_1611598457.png"></a></div>
-      <div class="slide"><a href='https://swinks.com.au/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/swinks_1611652897.png"></a></div>
-      <div class="slide"><a href='https://www.majesticpinball.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/majesticpinball_1612347249.png"></a></div>
-      <div class="slide"><a href='https://www.pinballlife.com/'><img src="https://square.online/uploads/1/3/2/3/132317513/s147425658952962846_p7_i3_w400.png?width=160"></a></div>
+  <div class="slide"><a href='http://www.pinballsupernova.com/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/pinball supernova sticker_1611598454.jpg"></a></div>
+  <div class="slide"><a href='https://pinballbazaar.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/the-pinball-bazaar-01-small_1611598457.png"></a></div>
+  <div class="slide"><a href='https://swinks.com.au/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/swinks_1611652897.png"></a></div>
+  <div class="slide"><a href='https://www.majesticpinball.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/majesticpinball_1612347249.png"></a></div>
+  <div class="slide"><a href='https://www.pinballlife.com/'><img src="https://square.online/uploads/1/3/2/3/132317513/s147425658952962846_p7_i3_w400.png?width=160"></a></div>
 
-      <div class="slide"><a href='http://www.pinballsupernova.com/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/pinball supernova sticker_1611598454.jpg"></a></div>
-      <div class="slide"><a href='https://pinballbazaar.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/the-pinball-bazaar-01-small_1611598457.png"></a></div>
-      <div class="slide"><a href='https://swinks.com.au/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/swinks_1611652897.png"></a></div>
-      <div class="slide"><a href='https://www.majesticpinball.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/majesticpinball_1612347249.png"></a></div>
-      <div class="slide"><a href='https://www.pinballlife.com/'><img src="https://square.online/uploads/1/3/2/3/132317513/s147425658952962846_p7_i3_w400.png?width=160"></a></div>      
-    </section>
-  </div>
-</div>
+  <div class="slide"><a href='http://www.pinballsupernova.com/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/pinball supernova sticker_1611598454.jpg"></a></div>
+  <div class="slide"><a href='https://pinballbazaar.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/the-pinball-bazaar-01-small_1611598457.png"></a></div>
+  <div class="slide"><a href='https://swinks.com.au/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/swinks_1611652897.png"></a></div>
+  <div class="slide"><a href='https://www.majesticpinball.co.uk/'><img src="https://images.editor.website/uploads/b/76d484b672c0c8cc0b276992d7ac72a4cda998bbb8f494dae5df4b382649f2cd/majesticpinball_1612347249.png"></a></div>
+  <div class="slide"><a href='https://www.pinballlife.com/'><img src="https://square.online/uploads/1/3/2/3/132317513/s147425658952962846_p7_i3_w400.png?width=160"></a></div>      
+</section>
 `;
 
 var style = `
