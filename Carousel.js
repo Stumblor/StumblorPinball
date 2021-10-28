@@ -118,9 +118,9 @@ divNode.innerHTML = style;
 document.body.appendChild(divNode);
 
 // insert carousel
-$('#carousel')[0].innerHTML = html;
+$('.logo-carousel')[0].innerHTML = html;
 
-$('#carousel').slick({
+$('.logo-carousel').slick({
   autoplay: false,
   cssEase: 'linear',
   speed: 3990,
