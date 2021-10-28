@@ -20,7 +20,9 @@ var html = `
     </section>
   </div>
 </div>
+`;
 
+var style = `
 <style>
 .logo-carousel {
   overflow: inherit;
@@ -112,9 +114,14 @@ var html = `
 }
 
 </style>
-`
+`;
 
-// insert
+// style
+var divNode = document.createElement("div");
+divNode.innerHTML = style;
+document.body.appendChild(divNode);
+
+// insert carousel
 $('.logo-carousel')[0].innerHTML = html;
 
 $('.logo-carousel').slick({
