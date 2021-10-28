@@ -115,7 +115,7 @@ var html = `
 `
 
 // insert
-$('.logo-carousel').html(html);
+$('.logo-carousel')[0].innerHTML = html;
 
 $('.logo-carousel').slick({
   autoplay: false,
