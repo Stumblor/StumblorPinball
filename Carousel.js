@@ -124,7 +124,7 @@ $('.logo-carousel').slick({
   //autoplay: false,
   autoplay: true,
   cssEase: 'linear',
-  speed: 3990,
+  speed: 2500,
   slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
