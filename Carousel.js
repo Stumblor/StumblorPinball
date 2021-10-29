@@ -113,25 +113,24 @@ var style = `
 `;
 
 // style
-setTimeout(() => {
-  var divNode = document.createElement("div");
-  divNode.innerHTML = style;
-  document.body.appendChild(divNode);
+var divNode = document.createElement("div");
+divNode.innerHTML = style;
+document.body.appendChild(divNode);
 
-  // insert carousel
-  $('#carousel')[0].innerHTML = html;
+// insert carousel
+$('#carousel')[0].innerHTML = html;
 
-  $('.logo-carousel').slick({
-    //autoplay: false,
-    autoplay: true,
-    cssEase: 'linear',
-    autoplaySpeed: 0,
-    speed: 2000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
-  });
-}, 2000);
+$('.logo-carousel').slick({
+  //autoplay: false,
+  autoplay: true,
+  cssEase: 'linear',
+  autoplaySpeed: 0,
+  speed: 2000,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  pauseOnHover: false,
+  responsive: [{ breakpoint: 520, settings: { slidesToShow: 2 } }]
+});
+
