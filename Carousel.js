@@ -133,6 +133,6 @@ $('.logo-carousel').slick({
 });
 
 // use this to go to the next slide whenever you want
-setInterval(function() {
-  $('.logo-carousel').slick('slickNext');
-}, 1000);
+//setInterval(function() {
+//  $('.logo-carousel').slick('slickNext');
+//}, 1000);
