@@ -121,7 +121,8 @@ document.body.appendChild(divNode);
 $('#carousel')[0].innerHTML = html;
 
 $('.logo-carousel').slick({
-  autoplay: false,
+  //autoplay: false,
+  autoplay: true,
   cssEase: 'linear',
   speed: 3990,
   slidesToShow: 4,
